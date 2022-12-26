@@ -1,0 +1,48 @@
+{{ template "base" .}}
+
+{{ define "title" }}
+<title> Register </title>
+{{end}}
+
+{{define "content" }}
+
+<form action="/redirect-somewhere/">
+  
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="textHelp" class="form-text text-muted">No more than 50 symbols</small>
+    <small id="textHelp" class="form-text text-muted">Must include only english letters</small>
+    <small id="textHelp" class="form-text text-muted">Without specific charachters(*, /, &)</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" name="user-password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  
+  <div class="form-group">
+    <label for="address">Address: </label>
+    <input type="address" class="form-control" id="exampleInputPassword1" name="address" placeholder="Address">
+  </div>
+  
+  <div class="form-group">
+    <label for="description">Description: </label>
+    <input type="text" class="form-control" id="description" name="description" placeholder="user-description">
+    <small id="textHelp" class="form-text text-muted">Description must be no longer than 2000 symbols</small>
+  </div>
+  
+
+  <div class="form-group">
+    <label for="date">Date of birth: </label>
+    <input type="date" name="date" class="form-control" id="dateOfBirth" placeholder="dateOfBirth">
+  </div>
+  
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{{end}}
